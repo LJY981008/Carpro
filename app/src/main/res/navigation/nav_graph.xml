@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.carpro.fragment.MainFragment"
+        android:label="MainFragment" />
+
+    <fragment
+        android:id="@+id/saleFragment"
+        android:name="com.example.carpro.fragment.SaleFragment"
+        android:label="SaleFragment" />
+
+    <fragment
+        android:id="@+id/sellFragment"
+        android:name="com.example.carpro.fragment.SellFragment"
+        android:label="SellFragment" />
+    <fragment
+        android:id="@+id/priceFragment"
+        android:name="com.example.carpro.fragment.PriceFragment"
+        android:label="PriceFragment" />
+    <fragment
+        android:id="@+id/accidentFragment"
+        android:name="com.example.carpro.fragment.AccidentFragment"
+        android:label="AccidentFragment" />
+    <fragment
+        android:id="@+id/allianceFragment"
+        android:name="com.example.carpro.fragment.AllianceFragment"
+        android:label="AllianceFragment" />
+    <fragment
+        android:id="@+id/repairFragment"
+        android:name="com.example.carpro.fragment.RepairFragment"
+        android:label="RepairFragment" />
+
+    <action
+        android:id="@+id/action_global_mainFragment"
+        app:destination="@id/mainFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/mainFragment" />
+
+    <action
+        android:id="@+id/action_global_saleFragment"
+        app:destination="@id/saleFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/saleFragment" />
+
+    <action
+        android:id="@+id/action_global_sellFragment"
+        app:destination="@id/sellFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/sellFragment" />
+
+    <action
+        android:id="@+id/action_global_priceFragment"
+        app:destination="@id/priceFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/priceFragment" />
+
+    <action
+        android:id="@+id/action_global_accidentFragment"
+        app:destination="@id/accidentFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/accidentFragment" />
+
+    <action
+        android:id="@+id/action_global_allianceFragment"
+        app:destination="@id/allianceFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/allianceFragment" />
+
+    <action
+        android:id="@+id/action_global_repairFragment"
+        app:destination="@id/repairFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/repairFragment" />
+</navigation>

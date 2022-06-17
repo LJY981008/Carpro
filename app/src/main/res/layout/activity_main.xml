@@ -6,90 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/mainImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/ic_launcher_background"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/sale"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/ic_launcher_background"
-        app:civ_border_color="#00BCD4"
-        app:civ_border_overlay="true"
-        app:civ_border_width="5dp"
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainImage" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/accident"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/ic_launcher_background"
-        app:civ_border_color="#00BCD4"
-        app:civ_border_overlay="true"
-        app:civ_border_width="5dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sale" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/sell"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/ic_launcher_background"
-        app:civ_border_color="#00BCD4"
-        app:civ_border_overlay="true"
-        app:civ_border_width="5dp"
-        app:layout_constraintLeft_toRightOf="@+id/sale"
-        app:layout_constraintRight_toLeftOf="@+id/price"
-        app:layout_constraintTop_toBottomOf="@+id/mainImage" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/Introduce"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/ic_launcher_background"
-        app:civ_border_color="#00BCD4"
-        app:civ_border_overlay="true"
-        app:civ_border_width="5dp"
-        app:layout_constraintLeft_toRightOf="@+id/sale"
-        app:layout_constraintRight_toLeftOf="@+id/price"
-        app:layout_constraintTop_toBottomOf="@+id/sell" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/price"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="30dp"
-        android:src="@drawable/ic_launcher_background"
-        app:civ_border_color="#00BCD4"
-        app:civ_border_overlay="true"
-        app:civ_border_width="5dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainImage" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/repair"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="30dp"
-        android:src="@drawable/ic_launcher_background"
-        app:civ_border_color="#00BCD4"
-        app:civ_border_overlay="true"
-        app:civ_border_width="5dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/price" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

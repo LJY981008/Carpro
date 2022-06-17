@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="carList">
+        <item>소나타</item>
+        <item>아반떼</item>
+        <item>그랜저</item>
+        <item>아이오닉</item>
+        <item>코나</item>
+    </string-array>
+
+</resources>
