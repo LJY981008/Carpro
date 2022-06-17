@@ -1,8 +1,6 @@
 package com.example.carpro.saleList
 
-import android.net.Uri
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Button
@@ -13,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.carpro.R
 import com.example.carpro.databinding.ItemSalecarBinding
 
-class SaleAdapter(private val items: MutableList<Information>) :
+class SaleAdapter(private val items: MutableList<SaleInfo>) :
     RecyclerView.Adapter<SaleAdapter.ViewHolder>() {
 
     interface ItemClickListener {
@@ -43,7 +41,7 @@ class SaleAdapter(private val items: MutableList<Information>) :
 
     class ViewHolder(private val binding: ItemSalecarBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Information) {
+        fun bind(item: SaleInfo) {
             binding.tvCarType.text = "차종 : " + item.carType
             binding.tvCarPrice.text = "가격 : " + item.carPrice + " 만원"
 

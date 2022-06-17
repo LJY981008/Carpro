@@ -23,13 +23,14 @@
         android:name="com.example.carpro.fragment.PriceFragment"
         android:label="PriceFragment" />
     <fragment
-        android:id="@+id/accidentFragment"
-        android:name="com.example.carpro.fragment.AccidentFragment"
-        android:label="AccidentFragment" />
-    <fragment
         android:id="@+id/allianceFragment"
         android:name="com.example.carpro.fragment.AllianceFragment"
         android:label="AllianceFragment" />
+    <fragment
+        android:id="@+id/accidentFragment"
+        android:name="com.example.carpro.fragment.AccidentFragment"
+        android:label="AccidentFragment" />
+
     <fragment
         android:id="@+id/repairFragment"
         android:name="com.example.carpro.fragment.RepairFragment"
@@ -65,15 +66,10 @@
         app:launchSingleTop="true"
         app:popUpTo="@+id/accidentFragment" />
 
-    <action
-        android:id="@+id/action_global_allianceFragment"
-        app:destination="@id/allianceFragment"
-        app:launchSingleTop="true"
-        app:popUpTo="@+id/allianceFragment" />
 
     <action
         android:id="@+id/action_global_repairFragment"
         app:destination="@id/repairFragment"
         app:launchSingleTop="true"
-        app:popUpTo="@+id/repairFragment" />
+        app:popUpTo="@+id/repairFragment" /><action android:id="@+id/action_global_allianceFragment" app:destination="@id/allianceFragment"/>
 </navigation>

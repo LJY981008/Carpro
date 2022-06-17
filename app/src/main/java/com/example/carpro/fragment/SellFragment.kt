@@ -1,14 +1,9 @@
 package com.example.carpro.fragment
 
-import android.Manifest
-import android.app.Activity
 import android.app.Activity.RESULT_OK
-import android.content.ClipData
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -20,14 +15,11 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.navigation.Navigation
 import com.example.carpro.R
 import com.example.carpro.Util
 import com.example.carpro.databinding.FragmentSellBinding
-import com.example.carpro.saleList.Information
-import java.text.FieldPosition
+import com.example.carpro.saleList.SaleInfo
 
 class SellFragment : Fragment() {
 
@@ -104,7 +96,7 @@ class SellFragment : Fragment() {
                         .show()
                 } else {
                     Util.carInfo.add(
-                        Information(
+                        SaleInfo(
                             carType,
                             binding.editPrice.text.toString(),
                             uriData,

@@ -11,8 +11,16 @@
         android:id="@+id/accidentImage"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/ic_launcher_background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imgbackground"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/accidentImage"
+        app:layout_constraintTop_toTopOf="@+id/accidentImage" />
 
     <TextView
         android:id="@+id/tv_accident"

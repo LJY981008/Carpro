@@ -1,9 +1,9 @@
 package com.example.carpro
 
-import com.example.carpro.saleList.Information
+import com.example.carpro.saleList.SaleInfo
 
 class Util {
     companion object{
-        var carInfo: MutableList<Information> = mutableListOf()
+        var carInfo: MutableList<SaleInfo> = mutableListOf()
     }
 }
