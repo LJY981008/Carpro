@@ -74,10 +74,14 @@ class SellFragment : Fragment() {
             ActivityResultCallback {
                 if (it.resultCode == RESULT_OK) {
                     it.data?.clipData?.let { it ->
-                        for (i in 0 until it.itemCount) {
-                            uriData.add(it.getItemAt(i).uri)
-                            binding.tvImageName.text =
-                                "${binding.tvImageName.text}" + ", " + "${it.getItemAt(i).uri.lastPathSegment}"
+                        if (it.itemCount > 5) {
+                            Toast.makeText(context, "5장까지만 선택 가능합니다.", Toast.LENGTH_SHORT).show()
+                        } else {
+                            for (i in 0 until it.itemCount) {
+                                uriData.add(it.getItemAt(i).uri)
+                                binding.tvImageName.text =
+                                    "${binding.tvImageName.text}" + ", " + "${it.getItemAt(i).uri.lastPathSegment}"
+                            }
                         }
                     }
 

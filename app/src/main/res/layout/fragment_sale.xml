@@ -8,8 +8,18 @@
 
 
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="매물조회" />
+        android:layout_height="wrap_content"
+        android:text="매물조회"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/view_carlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:listitem="@layout/item_salecar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
