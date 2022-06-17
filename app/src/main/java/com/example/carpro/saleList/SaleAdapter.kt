@@ -38,7 +38,6 @@ class SaleAdapter(private val items: MutableList<SaleInfo>) :
     }
 
 
-
     class ViewHolder(private val binding: ItemSalecarBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: SaleInfo) {
@@ -52,8 +51,10 @@ class SaleAdapter(private val items: MutableList<SaleInfo>) :
                     AlertDialog.Builder(itemView.context).setView(dialogView).setTitle("상세정보")
 
                 dialogView.findViewById<TextView>(R.id.dtv_carType).text = "차종 : " + item.carType
-                dialogView.findViewById<TextView>(R.id.dtv_carPrice).text = "가격 : " + item.carPrice + " 만원"
-                dialogView.findViewById<TextView>(R.id.dtv_carIntroduce).text = "설명\n" + item.carIntroduce
+                dialogView.findViewById<TextView>(R.id.dtv_carPrice).text =
+                    "가격 : " + item.carPrice + " 만원"
+                dialogView.findViewById<TextView>(R.id.dtv_carIntroduce).text =
+                    "설명\n" + item.carIntroduce
                 var i = item.carUri.size
                 if (i > 0) dialogView.findViewById<ImageView>(R.id.image1)
                     .setImageURI(item.carUri[0])
@@ -68,7 +69,10 @@ class SaleAdapter(private val items: MutableList<SaleInfo>) :
 
                 val alert = builder.create()
                 alert.show()
-                alert.window?.setLayout(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT)
+                alert.window?.setLayout(
+                    WindowManager.LayoutParams.WRAP_CONTENT,
+                    WindowManager.LayoutParams.WRAP_CONTENT
+                )
                 dialogView.findViewById<Button>(R.id.btn_OK).setOnClickListener {
                     alert.dismiss()
                 }

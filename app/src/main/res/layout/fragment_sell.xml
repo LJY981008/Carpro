@@ -34,6 +34,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="차종" />
 
         <Spinner
@@ -99,12 +100,13 @@
             android:ems="10"
             android:maxLines="1" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_UploadImage"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="20dp"
-            android:text="찾아보기" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/load" />
 
     </LinearLayout>
 
@@ -119,10 +121,12 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/thirdLinear" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_Complete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/write"
         android:text="작성"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

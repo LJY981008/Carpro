@@ -10,14 +10,14 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        app:title="매물조회"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_margin="-1dp"
         android:background="@drawable/imgbackground"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="매물조회" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/view_carlist"

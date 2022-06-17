@@ -18,9 +18,9 @@ class AccidentFragment : Fragment() {
         binding = FragmentAccidentBinding.inflate(inflater, container, false)
 
         binding.btnSearch.setOnClickListener {
-            if(binding.editCarNumber.text.isNullOrBlank()) {
+            if (binding.editCarNumber.text.isNullOrBlank()) {
                 Toast.makeText(context, "차량번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
-            }else{
+            } else {
                 binding.tvResult.text = "${binding.editCarNumber.text}" + "의 사고이력"
             }
 

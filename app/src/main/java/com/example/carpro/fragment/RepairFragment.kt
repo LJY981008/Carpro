@@ -18,14 +18,14 @@ class RepairFragment : Fragment() {
         binding = FragmentRepairBinding.inflate(inflater, container, false)
 
         binding.btnSearch.setOnClickListener {
-            if(binding.editCarNumber.text.isNullOrBlank()) {
+            if (binding.editCarNumber.text.isNullOrBlank()) {
                 Toast.makeText(context, "차량번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
-            }else{
+            } else {
                 binding.tvResult.text = "${binding.editCarNumber.text}" + "의 원부조회 결과"
             }
 
         }
-        
+
         return binding.root
     }
 
