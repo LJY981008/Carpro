@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fullbackground"
     tools:context=".fragment.AllianceFragment">
-
+    <androidx.appcompat.widget.Toolbar
+        android:layout_margin="-1dp"
+        app:title="딜러제휴"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/imgbackground"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_alliance"
+        android:scrollbars="vertical"
+        android:scrollbarFadeDuration="0"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_alliance" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

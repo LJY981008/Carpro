@@ -45,7 +45,7 @@ class SaleAdapter(private val items: MutableList<SaleInfo>) :
             binding.tvCarType.text = "차종 : " + item.carType
             binding.tvCarPrice.text = "가격 : " + item.carPrice + " 만원"
 
-            binding.LinearSalecar.setOnClickListener {
+            binding.linearSalecar.setOnClickListener {
                 val dialogView =
                     LayoutInflater.from(itemView.context).inflate(R.layout.dialog_sale, null)
                 val builder =

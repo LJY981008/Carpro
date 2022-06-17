@@ -4,32 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fullbackground"
     android:orientation="vertical"
     tools:context=".fragment.AccidentFragment">
 
-    <ImageView
-        android:id="@+id/accidentImage"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/imgbackground"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="?attr/actionBarSize"
+        android:layout_margin="-1dp"
+        android:background="@drawable/imgbackground"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="사고조회" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="@+id/accidentImage"
-        app:layout_constraintTop_toTopOf="@+id/accidentImage" />
-
-    <TextView
-        android:id="@+id/tv_accident"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="사고이력조회"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/accidentImage" />
 
     <LinearLayout
         android:id="@+id/Linear_accident"
@@ -37,7 +27,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/tv_accident">
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <TextView
             android:layout_width="wrap_content"

@@ -14,26 +14,7 @@ import com.example.carpro.databinding.FragmentAllianceBinding
 class AllianceFragment : Fragment() {
     private lateinit var binding: FragmentAllianceBinding
     private lateinit var adapter: AllianceAdapter
-    private val allianceList: MutableList<AllianceInfo> = mutableListOf(
-        /*AllianceInfo(
-            ContextCompat.getDrawable(
-                requireActivity(),
-                R.drawable.img
-            )!!, "홍길동", "010-1234-5678"
-        ),
-        AllianceInfo(
-            ContextCompat.getDrawable(
-                requireActivity(),
-                R.drawable.img
-            )!!, "황진이", "010-3456-2345"
-        ),
-        AllianceInfo(
-            ContextCompat.getDrawable(
-                requireActivity(),
-                R.drawable.img
-            )!!, "이순신", "010-5678-5432"
-        )*/
-    )
+    private val allianceList: MutableList<AllianceInfo> = mutableListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,6 +47,7 @@ class AllianceFragment : Fragment() {
         )
         adapter = AllianceAdapter(allianceList)
         binding.listAlliance.adapter = adapter
+
         return binding.root
     }
 }
