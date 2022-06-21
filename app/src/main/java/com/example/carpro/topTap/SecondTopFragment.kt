@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.carpro.R
+import com.example.carpro.databinding.FragmentFirstTopBinding
+import com.example.carpro.databinding.FragmentSecondTopBinding
 
 class SecondTopFragment : Fragment() {
     override fun onCreateView(
@@ -13,6 +15,9 @@ class SecondTopFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        return inflater.inflate(R.layout.fragment_second_top, container, false)
+        val binding = FragmentSecondTopBinding.inflate(inflater, container, false)
+        binding.back.setBackgroundResource(R.drawable.logo2)
+
+        return binding.root
     }
 }

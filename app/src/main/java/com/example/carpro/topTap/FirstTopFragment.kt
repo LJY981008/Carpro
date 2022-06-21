@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.carpro.R
+import com.example.carpro.databinding.FragmentFirstTopBinding
 
 class FirstTopFragment : Fragment() {
 
@@ -13,8 +14,10 @@ class FirstTopFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        val binding = FragmentFirstTopBinding.inflate(inflater, container, false)
+        binding.back.setBackgroundResource(R.drawable.logo1)
 
-        return inflater.inflate(R.layout.fragment_first_top, container, false)
+        return binding.root
     }
 
 }

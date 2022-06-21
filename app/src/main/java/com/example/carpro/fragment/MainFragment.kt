@@ -26,7 +26,7 @@ class MainFragment : Fragment() {
     ): View {
         binding = FragmentMainBinding.inflate(inflater, container, false)
 
-        val adapter = PageAdapter(parentFragmentManager)
+        val adapter = PageAdapter(childFragmentManager)
 
         adapter.addFragment(FirstTopFragment(), "1번")
         adapter.addFragment(SecondTopFragment(), "2번")
